@@ -11,5 +11,9 @@
     },
     "publishConfig": {
         "access": "public"
+    },
+    "dependencies": {
+        "app-root-path": "^3.1.0",
+        "recursive-copy": "^2.0.14"
     }
 }
