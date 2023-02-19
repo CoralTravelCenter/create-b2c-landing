@@ -8,7 +8,7 @@ const cwd = process.cwd();
 
 console.log("+++ create-b2c-landing: %o", cwd);
 
-copy(path.join(app_root_path, 'project-scaffold', '**'), cwd, (error, results) => {
+copy(path.join(app_root_path, 'project-scaffold'), cwd, (error, results) => {
     if (error) {
         console.error('Copy failed: ' + error);
     } else {
