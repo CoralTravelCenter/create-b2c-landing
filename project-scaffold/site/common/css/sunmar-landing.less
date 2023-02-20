@@ -1,16 +1,16 @@
-@import "/site/common/css/coral-fonts.less";
-@import "/site/common/css/coral-colors.less";
+@import "/site/common/css/sunmar-fonts.less";
+@import "/site/common/css/sunmar-colors.less";
 @import "/site/common/css/layout.less";
 
 section.hero {
 	>article {
-		font-family: museosans;
-		font-weight: 300;
+		font-family: BlissPro;
+		font-weight: normal;
 		h1, h2, h3, h4, h5 {
-			font-weight: 700;
+			font-weight: bold;
 		}
 		strong, b {
-			font-weight: 700;
+			font-weight: bold;
 		}
 		a {
 			font-family: inherit;
@@ -32,14 +32,14 @@ section.hero {
 				padding: 0 1.5em;
 				height: (48/20em);
 				//background: linear-gradient(45.62deg, #FB7099 0%, #F0AB13 100%);
-				background: @coral-main-yellow;
-				border-radius: .5em;
+				background: @sunmar-ramp;
+				border-radius: 100px;
 				border: 0;
 				color: white!important;
 				cursor: pointer;
 				.transit(background);
 				&:hover {
-					background: @coral-main-yellow-accent;
+					background: @sunmar-ramp-accent;
 				}
 				&.with-down-arrow {
 					&:after {

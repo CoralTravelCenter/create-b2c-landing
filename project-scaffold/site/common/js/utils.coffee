@@ -37,7 +37,7 @@ export responsiveHandler = (media_query, match_handler, unmatch_handler) ->
     if layout.matches then match_handler() else unmatch_handler()
     layout
 
-export autoplayVimeo = (lookup_selector = '.vimeo-video-box', vid_attr = 'data-vimeo-vid') ->
+export autoplayVimeo = (lookup_selector = '.vimeo-video-box [data-vimeo-vid]', vid_attr = 'data-vimeo-vid') ->
     vboxes = document.querySelectorAll(lookup_selector)
     if vboxes.length
         preload 'https://player.vimeo.com/api/player.js', ->
@@ -68,6 +68,8 @@ export autoplayVimeo = (lookup_selector = '.vimeo-video-box', vid_attr = 'data-v
 
 export fixLayout = () ->
     for heroSection in document.querySelectorAll('section.hero')
-        heroSection.closest('.widgetcontainer').classList.add('hero')
+        klasses = heroSection.closest('.widgetcontainer').classList
+        klasses.add('hero')
+        klasses.remove('oti-content-typography')
     if document.querySelector('section.underbrow')
         document.body.classList.add('underbrow')
