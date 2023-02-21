@@ -67,9 +67,10 @@ export autoplayVimeo = (lookup_selector = '.vimeo-video-box [data-vimeo-vid]', v
 
 
 export fixLayout = () ->
-    for heroSection in document.querySelectorAll('section.hero')
-        klasses = heroSection.closest('.widgetcontainer').classList
-        klasses.add('hero')
-        klasses.remove('oti-content-typography')
     if document.querySelector('section.underbrow')
         document.body.classList.add('underbrow')
+    ASAP ->
+        document.querySelectorAll('section.hero').forEach (heroSection) ->
+            klasses = heroSection.closest('.widgetcontainer').classList
+            klasses.add('hero')
+            klasses.remove('oti-content-typography')
