@@ -1,8 +1,69 @@
 @import "/site/common/css/sunmar-landing.less";
 
 section.kv {
-	//min-height: 300px;
 	.hero-visual(@desktop-visual-url: "/site/sunmar.ru/assets/intro-bg-desktop.jpg", @mobile-visual-url: "/site/sunmar.ru/assets/intro-bg-mobile.jpg");
 	color: white;
 }
 
+section.hero > article > .contenu {
+	font-family: "BlissPro", sans-serif;
+}
+
+.notcritical {
+	overflow-x: hidden;
+}
+
+.kv-benefits {
+	width: fit-content;
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	background-color: #FFFFFF;
+	border-radius: 1.25rem;
+	padding-inline: min(2.23%, 20px) !important;
+	padding-block: min(1.67%, 20px) !important;
+	margin-top: 2wv !important;
+
+	@media (max-width: 768px) {
+	justify-content: space-around;
+	margin-top: auto !important;
+	width: 100%;
+	gap: min(3%, 1rem);
+	order: 2;
+	}
+
+	@media (max-width: 576px) {
+	padding-block: 2.67% !important;
+	padding-inline: 3.23% !important;
+	}
+}
+
+.kv-benefits__item {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	color: var(--sunmar-blue);
+	flex-grow: 1;
+
+	@media (max-width: 768px) {
+		gap: min(5%, 10px);
+	}
+}
+
+.kv-benefits__item > span {
+	font-family: "BlissPro", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: min(2vw, .8rem);
+	line-height: 1;
+	color: #000000;
+	flex-shrink: 0;
+}
+
+.kv-benefits__item svg {
+	width: min(3.5em, 48px);
+	aspect-ratio: 1/1;
+	flex-shrink: 0;
+	height: auto;
+}
+   
