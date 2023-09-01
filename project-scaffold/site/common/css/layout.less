@@ -215,6 +215,36 @@ body.underbrow {
 	}
 }
 
+.hero-vimeo(@poster-frame-url: 'about:blank') {
+
+	@di-width: image-width(replace(@poster-frame-url, "^/", ""));
+	@di-height: image-height(replace(@poster-frame-url, "^/", ""));
+	@d-ratio: (@di-width / @di-height);
+	@desktop-visual-height: @di-height * (@hero-breakpoint / @di-width);
+
+	@d-content-ratio: (@max-content-width/@desktop-visual-height);
+
+	background: url(@poster-frame-url) center / cover no-repeat;
+
+	article {
+			.proportional(@max-content-width/@desktop-visual-height);
+	}
+	.vimeo-video-box {
+			.proportional(@d-ratio);
+			width: @hero-breakpoint;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			@media screen and (max-width: (@wide-breakpoint - 1px)) {
+					width: unit((1130px / @d-content-ratio) * @d-ratio, px);
+			}
+			@media screen and (max-width: (@mid-breakpoint - 1px)) {
+					width: unit((@d-ratio / @d-content-ratio) * 100, vw)
+			}
+	}
+}
+
 body:not(.underbrow) {
 	section.hero:first-of-type {
 		margin-top: 2.5em;
