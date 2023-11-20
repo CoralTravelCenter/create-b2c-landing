@@ -1,5 +1,6 @@
 {
     contents: [
-        '/site/sunmar.ru/markup/main.html'
+        '/site/sunmar.ru/markup/main.html',
+				'/site/sunmar.ru/markup/hero-text.html'
     ]
 }
