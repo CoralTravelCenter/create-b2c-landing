@@ -1,17 +1,15 @@
-@import "/site/common/css/coral-fonts.less";
-@import "/site/common/css/coral-colors.less";
-@import "/site/common/css/layout.less";
+@import "/project-scaffold/site/common/css/layout.less";
 
 section.hero {
 	>article {
-		font-family: museosans;
+		font-family: inherit;
 		font-weight: 300;
 		h1, h2, h3, h4, h5 {
-			font-weight: 700;
+			font-weight: 600;
 			color: #000;
 		}
 		strong, b {
-			font-weight: 700;
+			font-weight: 600;
 		}
 		a {
 			font-family: inherit;
@@ -33,15 +31,14 @@ section.hero {
 				align-items: center;
 				padding: 0 1.5em;
 				height: (48/20em);
-				//background: linear-gradient(45.62deg, #FB7099 0%, #F0AB13 100%);
-				background: @coral-main-yellow;
+				background: #0093d0;
 				border-radius: .5em;
 				border: 0;
 				color: white!important;
 				cursor: pointer;
 				.transit(background);
 				&:hover {
-					background: @coral-main-yellow-accent;
+					background: #66D1FF;
 				}
 				&.with-down-arrow {
 					&:after {
