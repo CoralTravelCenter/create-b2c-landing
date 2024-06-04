@@ -1,4 +1,4 @@
-import { hostReactAppReady } from '/project-scaffold/site/common/js/utils';
+import { hostReactAppReady } from '/site/common/js/utils';
 
 hostReactAppReady().then(()=> {
     // Твой код
