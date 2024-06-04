@@ -6,6 +6,18 @@
 @narrow-breakpoint: 576px;
 @max-content-width: 1370px;
 
+.flex-grid-mixin(@gap: 20px, @items-per-row: 4) {
+	display: flex;
+	flex-wrap: wrap;
+	margin: calc(@gap / -2);
+
+	>* {
+		flex: 0 0 calc((100% / @items-per-row) - @gap);
+		margin: calc(@gap / 2);
+	}
+}
+
+
 .reset() {
 	position: static;
 	left: auto;

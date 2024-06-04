@@ -1,1 +1,5 @@
 /.idea/
+/.parcel-cache/
+/prod/
+/dev/
+/@CMS/
