@@ -1,6 +1,64 @@
-@import "/site/common/css/coral-landing.less";
+@import "/project-scaffold/site/common/css/coral-landing.less";
 
-/*Конец глобальных стилей*/
-section.kv {
-	.hero-vimeo(@poster-frame-url: "/site/coral.ru/assets/intro-bg-desktop.jpg");
+section.kv > article .contenu {
+    padding-inline: 0 !important;
+
+    .kv-main-banner {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1370/520;
+
+        @media (max-width: 768px) {
+            aspect-ratio: 343/520;
+        }
+
+        img {
+            border-radius: 1em;
+        }
+
+        .content {
+            --base-color: #ffffff;
+
+            position: absolute;
+            max-width: 1370px;
+            margin-inline: auto;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: .5em;
+            padding: 1em 4em;
+
+            @media (max-width: 768px) {
+                justify-content: start;
+                padding: 2.5em 1.5em;
+            }
+
+            h2,p {
+                color: var(--base-color);
+            }
+
+            p {
+                font-weight: 400;
+            }
+
+            h2 {
+                font-weight: 300 !important;
+                font-size: 2.3em;
+                @media (max-width: 768px) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+section.kv.full-width > article .contenu {
+    .kv-main-banner img {
+        border-radius: unset;
+    }
 }
