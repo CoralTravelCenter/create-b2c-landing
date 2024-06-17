@@ -1,13 +1,34 @@
 <body>
-<link rel="stylesheet" href="/site/sunmar.ru/css/main.less">
-<section class="hero kv">
-    <div class="vimeo-video-box">
-        <div class="vimeo-player hidden-on-mobile" data-vimeo-vid="792936664"></div>
-        <div class="vimeo-player hidden-on-desktop" data-vimeo-vid="792936973"></div>
-    </div>
-    <article>
-        <div class="contenu"> </div>
-    </article>
-</section>
-<script type="module" src="/site/sunmar.ru/js/main.coffee"></script>
+	<link rel="stylesheet" href="/project-scaffold/site/sunmar.ru/css/main.less">
+	<section class="hero kv">
+		<article>
+			<div class="contenu">
+				<div class="kv-main-banner">
+					<div class="vimeo-video-box">
+						<div class="vimeo-player" data-vimeo-vid="792166621"></div>
+						<div class="vimeo-player mobile" data-vimeo-vid="792166859"></div>
+					</div>
+					<div class="content">
+						<p>Акция</p>
+						<h2>Киберпонедельник</h2>
+						<p class="slogan">
+							Текст акции
+						</p>
+					</div>
+					<picture>
+						<source 
+							media="(max-width: 768px)"
+							width="343"
+							height="520"
+							srcset="/project-scaffold/site/sunmar.ru/assets/intro-bg-mobile.jpg">
+						<img 
+							width="1370"
+							height="520"
+							src="/project-scaffold/site/sunmar.ru/assets/intro-bg.jpg">
+					</picture>
+				</div>
+			</div>
+		</article>
+	</section>
+	<script type="module" src="/project-scaffold/site/sunmar.ru/js/main.js"></script>
 </body>

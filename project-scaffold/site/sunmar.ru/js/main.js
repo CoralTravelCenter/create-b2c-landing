@@ -3,3 +3,4 @@ import { hostReactAppReady, vidautoplay } from '/project-scaffold/site/common/js
 hostReactAppReady().then(()=> {
     vidautoplay();
 });
+

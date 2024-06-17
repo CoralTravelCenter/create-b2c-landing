@@ -1,8 +1,6 @@
-@import "/site/common/css/coral-landing.less";
+@import "/project-scaffold/site/common/css/coral-landing.less";
 
 section.kv > article .contenu {
-    padding-inline: 0 !important;
-
     .kv-main-banner {
         position: relative;
         width: 100%;
@@ -32,6 +30,7 @@ section.kv > article .contenu {
             justify-content: center;
             gap: .5em;
             padding: 1em 4em;
+            z-index: 3;
 
             @media (max-width: 768px) {
                 justify-content: start;
@@ -40,25 +39,29 @@ section.kv > article .contenu {
 
             h2,p {
                 color: var(--base-color);
+                @media (max-width: 768px) {
+                    text-align: center;
+                }
             }
 
             p {
                 font-weight: 400;
             }
 
+            p.slogan {
+                font-size: .7em;
+            }
+
             h2 {
                 font-weight: 300 !important;
-                font-size: 2.3em;
+                font-size: 2.5em;
                 @media (max-width: 768px) {
                     margin-top: 0;
+                    font-size: 2.3em;
                 }
             }
         }
     }
 }
 
-section.kv.full-width > article .contenu {
-    .kv-main-banner img {
-        border-radius: unset;
-    }
-}
+
