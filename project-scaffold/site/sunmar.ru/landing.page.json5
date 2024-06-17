@@ -5,7 +5,7 @@
         cdnAssetsURL: '//b2ccdn.sunmar.ru/content/landing-pages/<название корневой папки>'
     },
     contents: [
-        '/project-scaffold/site/sunmar.ru/markup/main.html',
-        '/project-scaffold/site/sunmar.ru/markup/hero-text.html'
+        '/site/sunmar.ru/markup/main.html',
+        '/site/sunmar.ru/markup/hero-text.html'
     ]
 }
