@@ -11,7 +11,7 @@
 	flex-wrap: wrap;
 	gap: @gap;
 
-	>* {
+	> * {
 		width: calc((100% - (@items-per-row - 1) * @gap) / @items-per-row);
 	}
 }
@@ -64,7 +64,7 @@
 		padding-top: (1/@width2height-ratio) * 100%;
 	}
 
-	&>* {
+	& > * {
 		.abs100x100;
 	}
 }
@@ -135,7 +135,7 @@ section {
 	.bbox;
 
 	&.hero {
-		>article {
+		> article {
 			.silly-b2c-font-size;
 			max-width: 1370px;
 			margin: auto;
@@ -148,7 +148,7 @@ section {
 				max-width: 100%;
 			}
 
-			>.contenu {
+			> .contenu {
 				display: flex;
 				flex-direction: column;
 			}
@@ -230,8 +230,8 @@ section {
 	}
 
 
-	>article {
-		>.contenu {
+	> article {
+		> .contenu {
 			align-items: start;
 			padding-top: 2em;
 			padding-bottom: 2em;
@@ -241,22 +241,22 @@ section {
 				padding-bottom: 1.2em;
 			}
 
-			>h1,
-			>.h1,
-			>h2,
-			>.h2,
-			>h3,
-			>.h3,
-			>h4,
-			>.h4,
-			>h5,
-			>.h5,
-			>p {
+			> h1,
+			> .h1,
+			> h2,
+			> .h2,
+			> h3,
+			> .h3,
+			> h4,
+			> .h4,
+			> h5,
+			> .h5,
+			> p {
 				text-align: left;
 				max-width: 100%;
 			}
 
-			>*:nth-child(n+2) {
+			> *:nth-child(n+2) {
 				margin-top: 1.2em;
 			}
 		}
@@ -274,7 +274,7 @@ section {
 	padding-inline: 0 !important;
 }
 
-section.hero:not(.full-width)>article {
+section.hero:not(.full-width) > article {
 	max-width: 1530px;
 
 	iframe {
@@ -282,7 +282,7 @@ section.hero:not(.full-width)>article {
 	}
 }
 
-section.hero.full-width>article {
+section.hero.full-width > article {
 	max-width: 100%;
 
 	img {
@@ -323,33 +323,35 @@ section.hero .vimeo-video-box {
 
 body:has(section.full-width) section.hero:not(.kv) > article {
 	max-width: 1920px;
+
 	.contenu {
 		padding-inline: 80px;
 		max-width: 1370px;
 		margin-inline: auto;
-	
+
 		@media (max-width: 768px) {
-			padding-inline: 16;
+			padding-inline: 16px;
 		}
 	}
 }
 
 body:has(h1) {
 	section.kv {
-		margin-top: -7.2em;
+		margin-top: -80px;
 
 		@media (max-width: 768px) {
-			margin-top: -6.2em;
+			margin-top: -60px;
 		}
 	}
 
 	h1 {
-		margin-left: 1em;
-		margin-top: 1em;
+		margin-left: 20px;
+		margin-top: 40px;
+		font-size: 8px !important;
 	}
 }
 
-section.kv.full-width>article .contenu {
+section.kv.full-width > article .contenu {
 	.kv-main-banner img {
 		border-radius: unset;
 	}
