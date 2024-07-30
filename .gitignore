@@ -3,3 +3,5 @@
 /prod/
 /dev/
 /@CMS/
+/node_modules/
+.DS_Store
