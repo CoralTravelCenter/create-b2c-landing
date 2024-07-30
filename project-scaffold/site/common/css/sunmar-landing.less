@@ -1,14 +1,19 @@
-@import "/site/common/css/layout.less";
+@import '/site/common/css/layout.less';
 
 section.hero {
-	>article {
+	> article {
 		font-family: inherit;
 		font-weight: 300;
-		h1, h2, h3, h4, h5 {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
 			font-weight: 600;
 			color: #000;
 		}
-		strong, b {
+		strong,
+		b {
 			font-weight: 600;
 		}
 		a {
@@ -19,26 +24,39 @@ section.hero {
 			text-decoration: underline;
 		}
 		.actions {
-			>button, >a {
-				font-family: inherit;
-				font-size: inherit!important;
-				line-height: inherit;
-				.interactive;
-				outline: none!important;
-				text-decoration: none;
-				display: inline-flex;
+			> button,
+			> a {
+				user-select: none;
+				background: linear-gradient(225deg, #e7317d 0%, #d8242a 100%);
+				color: #fff;
+				cursor: pointer;
+				border: 0;
+				border-radius: 2.5em;
 				justify-content: center;
 				align-items: center;
-				padding: 0 1.5em;
-				height: (48/20em);
-				background: linear-gradient(90deg, rgb(231, 49, 125) 0%, rgb(216, 36, 42) 100%);
-				border-radius: (50/20em);
-				border: 0;
-				color: white!important;
-				cursor: pointer;
+				padding: 0.8em 2em;
+				font-family: inherit;
+				font-size: 0.8em;
+				font-weight: 500;
+				line-height: 1.37em;
+				text-decoration: none;
+				transition: background 0.5s;
+				display: inline-flex;
+				outline: none;
 				.transit(background);
-				&:hover {
-					background: linear-gradient(90deg, rgb(216, 36, 42) 100%, rgb(231, 49, 125) 0%);
+
+				@media (max-width: 768px) {
+					font-size: 1.27em;
+				}
+
+				@media (hover: hover) {
+					&:hover {
+						background: linear-gradient(225deg, #f25999 0%, #dd353b 100%);
+					}
+				}
+
+				&:active {
+					background: linear-gradient(225deg, #b92161 0%, #c11117 100%);
 				}
 			}
 		}

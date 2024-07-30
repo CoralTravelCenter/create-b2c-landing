@@ -1,5 +1,10 @@
-import { hostReactAppReady, vidautoplay } from '/site/common/js/utils';
+import {
+	hostReactAppReady,
+	vimeoAutoPlay,
+	setH1UnderKV,
+} from '/site/common/js/utils';
 
-hostReactAppReady().then(()=> {
-    vidautoplay();
+hostReactAppReady().then(() => {
+	vimeoAutoPlay();
+	setH1UnderKV();
 });

@@ -1,11 +1,12 @@
 {
-    env: {
-        brand: 'coral-next',
-        cmsWidgetContainer: '<div>{{{ widget_markup }}}</div>',
-        cdnAssetsURL: '//b2ccdn.coral.ru/content/landing-pages/<название корневой папки>'
-    },
-    contents: [
-        '/site/coral.ru/markup/main.html',
-        '/site/coral.ru/markup/hero-text.html'
-    ]
+	env: {
+		brand: 'coral-next',
+		cmsWidgetContainer: '<div>{{{ widget_markup }}}</div>',
+		cdnAssetsURL: '//b2ccdn.coral.ru/content/landing-pages/<название корневой папки>',
+	},
+	contents: [
+		'/site/coral.ru/markup/main.html',
+		'/site/coral.ru/markup/hero-text.html',
+		'/site/coral.ru/markup/contacts.html',
+	],
 }
