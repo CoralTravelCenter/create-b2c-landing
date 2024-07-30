@@ -83,7 +83,9 @@ export function mediaMatcher(size, callback) {
 
 export function setH1UnderKV() {
 	const h1 = document.querySelector('h1');
-	h1.classList.add('under-kv');
 	const kv = document.querySelector('.kv-main-banner');
-	kv.prepend(h1);
+	if (h1) {
+		h1.classList.add('under-kv');
+		kv.prepend(h1);
+	}
 }
