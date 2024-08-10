@@ -1,24 +1,22 @@
-@import '/site/common/css/coral-landing.less';
+@import '/project-scaffold/site/common/css/coral-landing.less';
 
 section.kv > article .contenu {
 	.kv-main-banner {
 		position: relative;
 		width: 100%;
 		aspect-ratio: 137/52;
+		border-radius: 32px;
+		overflow: hidden;
 
 		@media (max-width: 768px) {
 			aspect-ratio: 343/520;
 		}
 
-		img {
-			border-radius: 1em;
-		}
-
 		.content {
-			--base-color: #ffffff;
+			--content-font-color: #ffffff;
 
 			position: absolute;
-			max-width: 1370px;
+			max-width: @max-content-width;
 			margin-inline: auto;
 			top: 0;
 			left: 50%;
@@ -26,7 +24,6 @@ section.kv > article .contenu {
 			height: 100%;
 			transform: translateX(-50%);
 			padding: 1em 4em;
-			z-index: 3;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -53,11 +50,18 @@ section.kv > article .contenu {
 				}
 			}
 
-			h2,
+			h1,
 			p {
-				color: var(--base-color);
+				color: var(--content-font-color);
 				@media (max-width: 768px) {
 					text-align: center;
+				}
+			}
+
+			h1 {
+				font-size: 2em;
+				@media (max-width: 768px) {
+					margin-top: 0;
 				}
 			}
 
@@ -66,7 +70,7 @@ section.kv > article .contenu {
 			}
 
 			p.slogan {
-				font-size: 0.7em;
+				font-size: 1em;
 			}
 
 			p.erid {
@@ -77,14 +81,7 @@ section.kv > article .contenu {
 				}
 			}
 
-			h2 {
-				font-weight: 300 !important;
-				font-size: 2.5em;
-				@media (max-width: 768px) {
-					margin-top: 0;
-					font-size: 2.3em;
-				}
-			}
+
 		}
 
 		picture {
@@ -93,3 +90,6 @@ section.kv > article .contenu {
 		}
 	}
 }
+
+
+

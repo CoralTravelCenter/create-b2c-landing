@@ -82,7 +82,7 @@ export function mediaMatcher(size, callback) {
 }
 
 export function setH1UnderKV() {
-	const h1 = document.querySelector('h1');
+	const h1 = document.querySelector('h1:not(.kv-headline)');
 	const kv = document.querySelector('.kv-main-banner');
 	if (h1) {
 		h1.classList.add('under-kv');

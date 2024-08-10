@@ -5,8 +5,8 @@
 		cdnAssetsURL: '//b2ccdn.coral.ru/content/landing-pages/<название корневой папки>',
 	},
 	contents: [
-		'/site/coral.ru/markup/main.html',
-		'/site/coral.ru/markup/hero-text.html',
-		'/site/coral.ru/markup/contacts.html',
+		'/project-scaffold/site/coral.ru/markup/main.html',
+		'/project-scaffold/site/coral.ru/markup/hero-text.html',
+		'/project-scaffold/site/coral.ru/markup/contacts.html',
 	],
 }
