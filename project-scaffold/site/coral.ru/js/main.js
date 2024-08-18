@@ -6,7 +6,7 @@ import {
 
 hostReactAppReady().then(() => {
 	vimeoAutoPlay();
+
+	// Функция прячет системный заголовок под баннер
 	setH1UnderKV();
 });
-
-

@@ -15,9 +15,9 @@ export async function hostReactAppReady(
 	});
 }
 
-export function getScript(async, scriptUrl, callback) {
+export function getScript(scriptUrl, callback) {
 	const script = document.createElement("script");
-	if (async) script.async;
+	script.async;
 	script.src = scriptUrl;
 	script.onload = callback;
 	document.body.appendChild(script);
@@ -29,7 +29,7 @@ export function vimeoAutoPlay() {
 	);
 	let players = {};
 	if (vboxes.length) {
-		getScript(true, "https://player.vimeo.com/api/player.js", doio);
+		getScript("https://player.vimeo.com/api/player.js", doio);
 	}
 	const io_options = {
 		root: null,
@@ -38,7 +38,7 @@ export function vimeoAutoPlay() {
 	};
 
 	function doio() {
-		const io = new IntersectionObserver((entries, observer) => {
+		const io = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				const targ = entry.target;
 				if (entry.isIntersecting) {
@@ -64,9 +64,6 @@ export function vimeoAutoPlay() {
 							this.element.parentElement.classList.add(
 								"playback",
 							);
-							document
-								.querySelector(".kv-main-banner")
-								.classList.add("playback");
 						});
 					}
 				} else {
@@ -103,4 +100,10 @@ export function copyToClipboard(text) {
 	} catch {
 		throw new Error(message);
 	}
+}
+
+export function setYMTarget(selector, target_id, target) {
+	selector.addEventListener("click", () => {
+		ym(target_id, "reachGoal", target);
+	});
 }

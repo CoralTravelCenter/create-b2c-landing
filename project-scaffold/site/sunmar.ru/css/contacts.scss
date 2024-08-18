@@ -1,16 +1,23 @@
 section.contacts > article .contenu {
 	align-items: center;
 	gap: 2em;
+
+	> * {
+		width: auto;
+	}
 }
-section.contacts > article .contenu h3 {
-	text-align: center;
+
+section.contacts > article .contenu > h3 {
+	text-align: center !important;
 	margin: 0;
 }
+
 section.contacts > article .contenu .links {
 	gap: 1em;
 	margin: 0;
 	display: flex;
 }
+
 section.contacts > article .contenu .links a {
 	flex-shrink: 0;
 	display: block;
@@ -33,10 +40,12 @@ section.contacts > article .contenu .tel {
 	font-size: 2em;
 	text-decoration: none;
 }
+
 section.contacts > article .contenu p {
 	text-align: center;
 	margin: 0;
 }
+
 section.contacts > article .contenu p a {
 	color: #d8242a;
 }

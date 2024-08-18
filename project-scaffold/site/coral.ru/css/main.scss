@@ -1,4 +1,5 @@
-@import '/project-scaffold/site/common/css/coral-landing.less';
+@import "../../common/css/coral/coral-fluid-mixins";
+@import "../../common/css/global-variables";
 
 section.kv > article .contenu {
 	.kv-main-banner {
@@ -12,11 +13,18 @@ section.kv > article .contenu {
 			aspect-ratio: 343/520;
 		}
 
+		/* Эти стили при необходимости корректировки размеров Iframe */
+		/* .vimeo-video-box iframe {
+			width: 103%;
+			transform: translateX(-50%);
+			left: 50%;
+		} */
+
 		.content {
 			--content-font-color: #ffffff;
 
 			position: absolute;
-			max-width: @max-content-width;
+			max-width: $max-content-width;
 			margin-inline: auto;
 			top: 0;
 			left: 50%;
@@ -59,9 +67,9 @@ section.kv > article .contenu {
 			}
 
 			h1 {
-				font-size: 2em;
 				@media (max-width: 768px) {
 					margin-top: 0;
+					@include font(36px);
 				}
 			}
 
@@ -80,8 +88,6 @@ section.kv > article .contenu {
 					margin: auto 0 0 0;
 				}
 			}
-
-
 		}
 
 		picture {
@@ -90,6 +96,3 @@ section.kv > article .contenu {
 		}
 	}
 }
-
-
-
