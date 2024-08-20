@@ -4,6 +4,10 @@
 @import "coral-fluid-mixins";
 @import "../layout";
 
+.row-outer-container:has(section.hero) {
+	background: #f1f7fb;
+}
+
 section.hero > article {
 	font-family: inherit;
 	font-weight: 400;

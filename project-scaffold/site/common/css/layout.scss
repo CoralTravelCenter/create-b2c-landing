@@ -7,10 +7,6 @@
 	box-sizing: border-box;
 }
 
-.row-outer-container:has(section.hero) {
-	background: #f1f7fb;
-}
-
 section.hero > article {
 	.contenu:has(.kv-main-banner) {
 		padding-top: 1em;
@@ -72,6 +68,12 @@ section.hero > article {
 	padding-inline: 0 !important;
 }
 
+.ant-col > div:has(section.hero.full-width) {
+	@media (max-width: 768px) {
+		padding-inline: 0;
+	}
+}
+
 section.hero:not(.full-width) > article {
 	max-width: $max-content-width;
 }
@@ -81,12 +83,16 @@ section.hero.full-width > article {
 }
 
 section.hero.kv.full-width {
+	.contenu {
+		padding-inline: 0;
+	}
+
 	.kv-main-banner {
 		border-radius: 0;
 	}
 }
 
-body:has(section.full-width) section.hero:not(.kv) > article {
+body:has(section.hero.full-width) section.hero:not(.kv) > article {
 	max-width: 100%;
 
 	.contenu {

@@ -21,7 +21,7 @@ section.phones-block > article .contenu .block {
 	@include property(padding, 20px);
 
 	display: grid;
-	grid-template-columns: max-content max-content 1fr max-content;
+	grid-template-columns: max-content max-content 211px max-content;
 	align-content: start;
 
 	p {

@@ -25,10 +25,11 @@ section.hero > article {
 
 		align-items: $container-align;
 		@include fontAndProperty($font_Size_Body, padding-block, 40px);
-
+		padding-inline: 80px;
 
 		@media (max-width: $mobile-breakpoint) {
 			@include fontAndProperty($font_Size_Body, padding-block, 24px);
+			padding-inline: 0;
 		}
 	}
 
@@ -38,7 +39,7 @@ section.hero > article {
 	h4,
 	h5 {
 		margin: 0;
-		color: inherit;
+		color: $font_Color_Default;
 		font-weight: 600;
 		text-align: $text-align;
 	}
@@ -46,50 +47,50 @@ section.hero > article {
 	h1 {
 		@include font($font_Line_Height_Heading_1);
 		@include setLineHeight(
-				$font_Line_Height_Heading_1,
-				$font_Line_Height_Heading_1
+			$font_Line_Height_Heading_1,
+			$font_Line_Height_Heading_1
 		);
 	}
 
 	h2 {
 		@include font($font_Line_Height_Heading_2);
 		@include setLineHeight(
-				$font_Line_Height_Heading_2,
-				$font_Line_Height_Heading_2
+			$font_Line_Height_Heading_2,
+			$font_Line_Height_Heading_2
 		);
 	}
 
 	h3 {
 		@include font($font_Line_Height_Heading_3);
 		@include setLineHeight(
-				$font_Line_Height_Heading_3,
-				$font_Line_Height_Heading_3
+			$font_Line_Height_Heading_3,
+			$font_Line_Height_Heading_3
 		);
 	}
 
 	h4 {
 		@include font($font_Line_Height_Heading_4);
 		@include setLineHeight(
-				$font_Line_Height_Heading_5,
-				$font_Line_Height_Heading_5
+			$font_Line_Height_Heading_5,
+			$font_Line_Height_Heading_5
 		);
 	}
 
 	h5 {
 		@include font($font_Line_Height_Heading_5);
 		@include setLineHeight(
-				$font_Line_Height_Heading_5,
-				$font_Line_Height_Heading_5
+			$font_Line_Height_Heading_5,
+			$font_Line_Height_Heading_5
 		);
 	}
 
 	p {
 		margin: 0;
+		color: $font_Color_Default;
 		@include font($font_Size_Body);
 		@include setLineHeight($font_Line_Height_Body, $font_Size_Body);
 		text-align: $text-align;
 	}
-
 
 	strong,
 	b {
@@ -125,41 +126,40 @@ section.hero > article {
 			}
 
 			&:active {
-				background: linear-gradient(225deg, #B92161 0%, #C11117 100%);
+				background: linear-gradient(225deg, #b92161 0%, #c11117 100%);
 			}
 		}
 
 		> button.navy,
 		> a.navy {
-			background: #0E2855;
-			border: 1px solid rgba(0, 0, 0, 0.10);
+			background: #0e2855;
+			border: 1px solid rgba(0, 0, 0, 0.1);
 			color: #fff;
 			@media (hover: hover) {
 				&:hover {
-					background: #12336C;
+					background: #12336c;
 				}
 			}
 
 			&:active {
-				background: #061A3E;
+				background: #061a3e;
 			}
 		}
 
 		> button.light,
 		> a.light {
 			background: #fff;
-			border: 1px solid rgba(0, 0, 0, 0.10);
+			border: 1px solid rgba(0, 0, 0, 0.1);
 			color: #000;
 			@media (hover: hover) {
 				&:hover {
-					background: #F5F5F8;
+					background: #f5f5f8;
 				}
 			}
 
 			&:active {
-				background: #DFDFE8;
+				background: #dfdfe8;
 			}
 		}
 	}
 }
-
