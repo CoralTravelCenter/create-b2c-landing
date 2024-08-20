@@ -1,5 +1,6 @@
 @use "sass:math";
 @import "global-variables";
+@use 'sass:selector';
 
 @mixin flex-grid($gap: 1em, $items-per-row: 4, $justify: center) {
 	display: flex;
@@ -50,5 +51,18 @@
 
 	@media (max-width: $mobile-breakpoint) {
 		font-size: min(4.27vw, $base-font);
+	}
+}
+
+/*
+Миксин для установки тега к классу
+$child - задаем тег, для которого хотим повысить специфичность
+пример: &__link {} - хотим добавить 'a' вначале правила и получить a.text__link {}
+делаем так: &__link { @include(parentTag)(a) {} }
+получаем: a.text__link {}
+*/
+@mixin parentTag($child) {
+	@at-root #{selector.unify(&, $child)} {
+		@content;
 	}
 }
