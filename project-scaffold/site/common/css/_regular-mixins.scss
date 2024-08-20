@@ -1,7 +1,13 @@
 @use "sass:math";
 @import "global-variables";
-@use 'sass:selector';
+@use "sass:selector";
 
+/*
+Миксин для создания адаптивной сетки на флексах:
+$gap - отступ между элементами
+$items-per-row - колличество элементов в ряде
+$justif - горизонатльное выравнивание
+*/
 @mixin flex-grid($gap: 1em, $items-per-row: 4, $justify: center) {
 	display: flex;
 	flex-wrap: wrap;
@@ -13,6 +19,11 @@
 	}
 }
 
+/*
+Миксин для расчета line-height в относительных единицах:
+$LH - line-height в px
+$FZ - шрифт в px
+*/
 @mixin setLineHeight($LH, $FZ) {
 	line-height: math.div($LH, $FZ);
 }
