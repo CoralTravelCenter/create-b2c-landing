@@ -92,7 +92,7 @@ section.hero.kv.full-width {
 	}
 }
 
-body:has(section.hero.full-width) section.hero:not(.kv) > article {
+body:has(section.hero.full-width) section.hero:not(.full-width) > article {
 	max-width: 100%;
 
 	.contenu {
@@ -106,15 +106,15 @@ body:has(section.hero.full-width) section.hero:not(.kv) > article {
 	}
 }
 
-body:has(h1) {
-	h1.under-kv {
-		z-index: 1;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		font-size: 12px !important;
-		transform: translate(-50%, -50%);
-		margin: 0;
+section.hero.full-width > article {
+	.contenu {
+		padding-inline: 80px;
+		max-width: $max-content-width;
+		margin-inline: auto;
+
+		@media (max-width: $mobile-breakpoint) {
+			padding-inline: 16px;
+		}
 	}
 }
 

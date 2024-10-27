@@ -6,19 +6,12 @@ section.kv > article .contenu {
 		position: relative;
 		width: 100%;
 		aspect-ratio: 137/52;
-		border-radius: 32px;
+		border-radius: 2em;
 		overflow: hidden;
 
-		@media (max-width: 768px) {
+		@media (max-width: $mobile-breakpoint) {
 			aspect-ratio: 343/520;
 		}
-
-		/* Эти стили при необходимости корректировки размеров Iframe */
-		/* .vimeo-video-box iframe {
-			width: 103%;
-			transform: translateX(-50%);
-			left: 50%;
-		} */
 
 		.content {
 			--content-font-color: #ffffff;
@@ -51,14 +44,16 @@ section.kv > article .contenu {
 				justify-content: center;
 				align-items: start;
 				gap: 0.5em;
+				height: 100%;
 
 				@media (max-width: 768px) {
+					justify-content: start;
 					align-items: center;
 					margin-top: 0;
 				}
 			}
 
-			h2,
+			h1,
 			p {
 				color: var(--content-font-color);
 				@media (max-width: 768px) {
@@ -66,7 +61,8 @@ section.kv > article .contenu {
 				}
 			}
 
-			h2 {
+			h1 {
+				@include font(56px);
 				@media (max-width: 768px) {
 					margin-top: 0;
 					@include font(32px);

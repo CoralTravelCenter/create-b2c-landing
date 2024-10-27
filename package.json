@@ -14,5 +14,13 @@
     },
     "dependencies": {
         "recursive-copy": "^2.0.14"
+    },
+    "devDependencies": {
+        "sharp": "^0.33.5",
+        "yargs": "^17.7.2"
+    },
+    "scripts": {
+        "convert-coral": "node compres-and-covert.js -f project-scaffold/site/coral.ru/assets",
+        "convert-sunmar": "node compres-and-covert.js -f project-scaffold/site/sunmar.ru/assets"
     }
 }

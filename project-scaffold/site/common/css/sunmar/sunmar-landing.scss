@@ -45,42 +45,42 @@ section.hero > article {
 	}
 
 	h1 {
-		@include font($font_Line_Height_Heading_1);
+		@include font($font_Size_Heading_1);
 		@include setLineHeight(
 			$font_Line_Height_Heading_1,
-			$font_Line_Height_Heading_1
+			$font_Size_Heading_1
 		);
 	}
 
 	h2 {
-		@include font($font_Line_Height_Heading_2);
-		@include setLineHeight(
-			$font_Line_Height_Heading_2,
-			$font_Line_Height_Heading_2
+			@include font($font_Size_Heading_2);
+			@include setLineHeight(
+				$font_Line_Height_Heading_2,
+				$font_Size_Heading_2
 		);
 	}
 
 	h3 {
-		@include font($font_Line_Height_Heading_3);
+		@include font($font_Size_Heading_3);
 		@include setLineHeight(
 			$font_Line_Height_Heading_3,
-			$font_Line_Height_Heading_3
-		);
+			$font_Size_Heading_3
+	);
 	}
 
 	h4 {
-		@include font($font_Line_Height_Heading_4);
-		@include setLineHeight(
-			$font_Line_Height_Heading_5,
-			$font_Line_Height_Heading_5
+				@include font($font_Size_Heading_4);
+			@include setLineHeight(
+				$font_Line_Height_Heading_4,
+				$font_Size_Heading_4
 		);
 	}
 
 	h5 {
-		@include font($font_Line_Height_Heading_5);
+		@include font($font_Size_Heading_5);
 		@include setLineHeight(
 			$font_Line_Height_Heading_5,
-			$font_Line_Height_Heading_5
+	$font_Size_Heading_5
 		);
 	}
 
