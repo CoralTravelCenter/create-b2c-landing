@@ -1,26 +1,26 @@
 {
-    "name": "@coraltravelcenter/create-b2c-landing",
-    "version": "0.9.0",
-    "description": "",
-    "main": "./index.js",
-    "bin": "./index.js",
-    "license": "ISC",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/CoralTravelCenter/create-b2c-landing.git"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "dependencies": {
-        "recursive-copy": "^2.0.14"
-    },
-    "devDependencies": {
-        "sharp": "^0.33.5",
-        "yargs": "^17.7.2"
-    },
-    "scripts": {
-        "convert-coral": "node compres-and-covert.js -f project-scaffold/site/coral.ru/assets",
-        "convert-sunmar": "node compres-and-covert.js -f project-scaffold/site/sunmar.ru/assets"
-    }
+  "name": "@coraltravelcenter/create-b2c-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "bin": "./index.js",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoralTravelCenter/create-b2c-landing.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "recursive-copy": "^2.0.14"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5",
+    "yargs": "^17.7.2"
+  },
+  "scripts": {
+    "convert-coral": "node compres-and-covert.js -f project-scaffold/site/coral.ru/assets",
+    "convert-sunmar": "node compres-and-covert.js -f project-scaffold/site/sunmar.ru/assets"
+  }
 }

@@ -1,5 +1,4 @@
-/.idea/
-/.parcel-cache/
-/dev/
-/prod/
-/@CMS/
+.idea
+dev
+@CMS
+node_modules
